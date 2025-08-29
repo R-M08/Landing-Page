@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="Wed_Page.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The coolest Wedsite</title>
+</head>
+<body>
+    <div class="intro">
+            
+
+        <div class="Header_label">
+            <a href="#About"><i class="fa fa-fw fa-user"></i>About</a>
+            <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+            <a href="#F&Q"><i class="fa fa-fw fa-question"></i>F&Q</a>
+            <a href="#Support"><i class="fa fa-fw fa-support"></i>Support</a>
+            <div class="Header_button">
+                <button><i class="fa fa-fw fa-lock"></i> Sign Up</button>
+            </div>
+        </div>
+
+       <div class="Image_Continer">
+            <img src="https://i.natgeofe.com/n/9135ca87-0115-4a22-8caf-d1bdef97a814/75552.jpg" alt="grumy cat" class="Image_cat">
+            <img src="https://www.petfinder.com/sites/default/files/images/content/152964589-welcome-home-new-cat-632x475.jpg" class="Image_cat" style="width: 28%;">
+            <img src="https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg" class="Image_cat">
+       </div> 
+       
+        <div class="Image_Box">
+            <h1>Welcome!!</h1>
+            <h2>The Coolest Wedsite Ever!!</h2>
+            <p>This is the coolest Wedsite ever with cool stuff and cats. "Why cats?" you ask, because their cute, simple.</p>     
+        </div>
+
+    </div>
+
+    <div class="Body_1">
+        <div class="Slider_Show">
+
+            <div class="MySlides">
+                <q>10/10 Saved my marriage </q>
+                <p> -Smith Simmons</p>
+            </div>
+            <div class="MySlides">
+                <q>This is a nice wedsite I guess. Nothing too -- Wait.. is that a gun!? WAIT NO PLA---</q> 
+                <p> -Williams Parker</p>
+            </div>
+            <div class="MySlides">
+                <q>I LOVE this wedsite!! The cats? The charming arua? AND THE CATS??? No better wedsite.</q>
+                <p> -Riley O'Connor</p>
+            </div>
+          
+            <a class="Prev" onclick="PlusSlides(-1)"> < </a>
+            <a class="continue" onclick="PlusSlides(1)"> > </a>
+
+        </div>
+        <div class="dot_Box">
+
+            <span class="dot" onclick="currentSlider(1)"></span>
+            <span class="dot" onclick="currentSlider(2)"></span>
+            <span class="dot" onclick="currentSlider(3)"></span>
+
+        </div>
+        <script>
+        var IndexSlider = 1;
+        Slider_Show(IndexSlider);
+
+        function PlusSlides(n){
+            Slider_Show(IndexSlider += n);
+        }
+
+        function currentSlider(n){
+            Slider_Show(IndexSlider = n);
+        }
+
+        function Slider_Show(n) {
+            var i;
+            var slide = document.getElementsByClassName("MySlides");
+            var dots = document.getElementsByClassName("dot");
+            if(n > slide.length){IndexSlider = 1}
+            if(n < 1){IndexSlider = slide.length}
+            for (i =0; i<slide.length; i++ ){
+                slide[i].style.display = "none";
+            }
+            for(i =0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slide[IndexSlider - 1].style.display = "block";
+            dots[IndexSlider - 1].className += " active";
+        }
+        </script>
+        
+    </div>
+
+    <div class="Body_2">
+        <div class="Image_Continer_2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cat_07464_kalamis_safinaz.jpg/500px-Cat_07464_kalamis_safinaz.jpg" class="Image_cat_2">
+            <div class="Text_continer">
+                <h1><i class="fa fa-fw fa-pencil"></i>Our creator</h1>
+                <p>Mr. meow meow has one mission, create the best wedsite ever.<br>
+                    <q>meow meow meow meow. meow meow! meowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeow.</q><br><br>
+                With an amazing team of coder, designer and other stuff, this wedsite was born!!</p>
+            </div>
+        </div>
+    </div>
+    <div class="Body_3">
+        <div class="Image_Continer_3">
+            <div class="Text_Continer_3">
+                <p>Want to be part of the family?<br><br></p>
+                <p>Sign up!!</p><div class="Button_continer"><button><i class="fa fa-fw fa-lock"></i> Sign Up</button></div>
+                <p><i class="fa fa-fw fa-check"></i>We are 87% safe and can be trusted!!</p>
+            </div>
+            <img src="https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/a3e47wjih6jh8ilxwxcz.jpg">
+        </div>
+
+    </div>
+    
+</body>
+</html>
